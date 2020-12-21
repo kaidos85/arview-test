@@ -1,0 +1,47 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "html"
+  ],
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".ts",
+      "html"
+    ]
+  },
+  "eslint.lintTask.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false,
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "eslint.enable": true,
+  "files.eol": "\r\n",
+  "files.exclude": {
+    ".nginx": true,
+    // Generated config files
+    "environments": true
+  },
+  "files.watcherExclude": {
+    "**/.nginx/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/.hg/store/**": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.alwaysShowStatus": true,
+  "html.autoClosingTags": false,
+  "html.format.enable": false,
+  "html.format.wrapLineLength": 80,
+  "editor.formatOnSaveMode": "modifications"
+}

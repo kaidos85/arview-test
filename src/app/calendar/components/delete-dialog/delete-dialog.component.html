@@ -1,0 +1,15 @@
+<nb-card class="delete-card">
+  <nb-card-header class="dialog-header">
+    <div>{{ title }}</div>
+  </nb-card-header>
+  <nb-card-body>
+    <div>{{ item.name }}</div>
+  </nb-card-body>
+  <nb-card-footer>
+    <button nbButton (click)="delete()" status="danger" class="deleteButton">
+      Удалить</button
+    ><button nbButton (click)="cancel()" status="basic" class="cancelButton">
+      Отмена
+    </button>
+  </nb-card-footer>
+</nb-card>

@@ -1,0 +1,48 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <nb-card>
+    <nb-card-header class="dialog-header">
+      <div>{{ title }}</div>
+    </nb-card-header>
+    <nb-card-body class="dialog-body">
+      <div>Название</div>
+      <input
+        fullWidth
+        type="text"
+        nbInput
+        formControlName="name"
+        [style.background-color]="hasError('time')"
+      />
+      <div>Тип события</div>
+      <input
+        fullWidth
+        type="text"
+        nbInput
+        formControlName="type"
+        [style.background-color]="hasError('time')"
+      />
+      <div>Куда идем</div>
+      <input
+        fullWidth
+        type="text"
+        nbInput
+        formControlName="address"
+        [style.background-color]="hasError('time')"
+      />
+      <div>Во сколько?</div>
+      <input
+        nbInput
+        fullWidth
+        [nbTimepicker]="timepicker"
+        formControlName="time"
+        [style.background-color]="hasError('time')"
+      />
+      <nb-timepicker #timepicker></nb-timepicker>
+    </nb-card-body>
+    <nb-card-footer>
+      <button type="submit" nbButton status="primary" class="closeButton">
+        Сохранить
+      </button>
+      <button nbButton class="closeButton" (click)="cancel()">Отмена</button>
+    </nb-card-footer>
+  </nb-card>
+</form>

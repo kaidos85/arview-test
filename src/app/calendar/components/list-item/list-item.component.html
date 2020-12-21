@@ -1,0 +1,17 @@
+<div class="grid">
+  <div>
+    <div>Название: {{ item.name }}</div>
+    <div>Время: {{ item.time | date: 'HH:mm' }}</div>
+    <div>Куда: {{ item.address }}</div>
+  </div>
+  <div class="actions">
+    <nb-actions [size]="'small'">
+      <nb-action (click)="editClick.emit(item)">
+        <nb-icon icon="edit-outline" status="danger"></nb-icon>
+      </nb-action>
+      <nb-action (click)="deleteClick.emit(item)">
+        <nb-icon icon="trash-2-outline" status="danger"></nb-icon>
+      </nb-action>
+    </nb-actions>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="grid">
+  <div class="left">
+    <nb-calendar
+      [(date)]="date"
+      size="large"
+      (dateChange)="changeClick.emit($event)"
+    ></nb-calendar>
+    <button nbButton status="primary" class="addButton" (click)="add()">
+      Добавить
+    </button>
+  </div>
+  <div class="right">
+    <nb-card size="medium">
+      <nb-card-header> События дня </nb-card-header>
+      <nb-list>
+        <nb-list-item *ngFor="let item of dayEvents">
+          <pr-app-list-item
+            [item]="item"
+            (editClick)="edit($event)"
+            (deleteClick)="delete($event)"
+          ></pr-app-list-item>
+        </nb-list-item>
+      </nb-list>
+    </nb-card>
+  </div>
+</div>

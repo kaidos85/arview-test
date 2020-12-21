@@ -1,18 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
+import { NgxsModule } from '@ngxs/store';
+import { environment } from 'src/environments/environment';
+import {
+  NbDatepickerModule,
+  NbDialogModule,
+  NbThemeModule,
+  NbTimepickerModule,
+} from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { NbMomentDateModule } from '@nebular/moment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CalendarModule } from './calendar/calendar.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NbDatepickerModule.forRoot(),
+    NbMomentDateModule,
+    CalendarModule,
+    NbThemeModule.forRoot({ name: 'default' }),
+    NbDialogModule.forRoot(),
+    NbTimepickerModule.forRoot(),
+    NbEvaIconsModule,
+    NgxsModule.forRoot([], {
+      developmentMode: !environment.production,
+    }),
+    NgxsStoragePluginModule.forRoot({ key: 'dayModelState' }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

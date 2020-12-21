@@ -1,0 +1,12 @@
+<nb-layout>
+  <nb-layout-column>
+    <pr-app-main-list
+      [dayEvents]="dayEvents$ | prDayItems | async"
+      (addClick)="addClick($event)"
+      (editClick)="editClick($event)"
+      (deleteClick)="deleteClick($event)"
+      (changeClick)="changeDate($event)"
+    ></pr-app-main-list>
+  </nb-layout-column>
+  ></nb-layout
+>
