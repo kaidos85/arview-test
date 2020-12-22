@@ -3,3 +3,10 @@
   grid-template-columns: 3fr 1fr;
   grid-gap: 5px;
 }
+
+div .actions {
+  visibility: hidden;
+}
+div:hover .actions  {
+  visibility: visible;
+}
