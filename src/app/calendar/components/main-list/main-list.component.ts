@@ -19,14 +19,15 @@ export class MainListComponent implements OnInit {
   changeClick = new EventEmitter();
 
   date = moment(new Date());
-  selectedDayEvents: DayModel[];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.changeClick.emit(this.date.utc(true).toDate());
+  }
 
   add(): void {
-    this.addClick.emit(this.date.utc(true));
+    this.addClick.emit(this.date.utc(true).toDate());
   }
 
   edit($event: DayModel): void {
@@ -38,6 +39,6 @@ export class MainListComponent implements OnInit {
   }
 
   change(): void {
-    this.changeClick.emit(this.date.utc(true));
+    this.changeClick.emit(this.date.utc(true).toDate());
   }
 }

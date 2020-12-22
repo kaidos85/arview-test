@@ -13,7 +13,6 @@ export class DayItemsPipe implements PipeTransform {
         data.items.filter((c) => {
           const date = moment(c.date);
           const sDate = moment(data.selectDate);
-          console.log(date.date(), sDate.date());
           if (
             sDate.date() === date.date() &&
             sDate.month() === date.month() &&

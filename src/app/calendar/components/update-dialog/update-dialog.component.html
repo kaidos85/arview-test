@@ -13,13 +13,16 @@
         [style.background-color]="hasError('name')"
       />
       <div>Тип события</div>
-      <input
-        fullWidth
-        type="text"
-        nbInput
+      <nb-select
         formControlName="type"
-        [style.background-color]="hasError('type')"
-      />
+        placeholder="Выберите событие"
+        fullWidth
+        status="basic"
+      >
+        <nb-option *ngFor="let item of types" [value]="item">{{
+          item
+        }}</nb-option>
+      </nb-select>
       <div>Куда идем</div>
       <input
         fullWidth

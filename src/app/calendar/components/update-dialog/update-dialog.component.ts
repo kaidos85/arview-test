@@ -15,6 +15,8 @@ export class UpdateDialogComponent implements OnInit {
   title: string;
   trySave = false;
 
+  types = ['Встреча', 'День рождения'];
+
   constructor(
     private formService: FormService,
     protected dialogRef: NbDialogRef<any>,

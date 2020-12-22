@@ -3,7 +3,7 @@
     <nb-calendar
       [(date)]="date"
       size="large"
-      (dateChange)="changeClick.emit($event)"
+      (dateChange)="change()"
     ></nb-calendar>
     <button nbButton status="primary" class="addButton" (click)="add()">
       Добавить
