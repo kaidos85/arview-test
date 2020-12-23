@@ -4,7 +4,6 @@ import { Store } from '@ngxs/store';
 import { DeleteDialogComponent } from 'src/app/calendar/components/delete-dialog/delete-dialog.component';
 import { UpdateDialogComponent } from 'src/app/calendar/components/update-dialog/update-dialog.component';
 import { AddAction } from '../actions/add.action';
-import { DeleteDialogAction } from '../actions/delete-dialog.action';
 import { DeleteAction } from '../actions/delete.action';
 import { EditAction } from '../actions/edit.action';
 

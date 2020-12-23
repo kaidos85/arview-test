@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngxs/store';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ControllerService } from '../../services/controller.service';
 import { ModelService } from '../../services/model.service';
@@ -8,14 +7,11 @@ import { ModelService } from '../../services/model.service';
   selector: 'pr-app-main-view',
   templateUrl: './main-view.component.html',
   styleUrls: ['./main-view.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainViewComponent implements OnInit {
   dayEvents$: Observable<DayHub>;
-  constructor(
-    model: ModelService,
-    private controller: ControllerService,
-    private store: Store
-  ) {
+  constructor(model: ModelService, private controller: ControllerService) {
     this.dayEvents$ = model.dayEvents$;
   }
 

@@ -12,6 +12,7 @@ import {
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbMomentDateModule } from '@nebular/moment';
+import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CalendarModule } from './calendar/calendar.module';
@@ -31,6 +32,7 @@ import { CalendarModule } from './calendar/calendar.module';
     NgxsModule.forRoot([], {
       developmentMode: !environment.production,
     }),
+    NgxsLoggerPluginModule.forRoot(),
     NgxsStoragePluginModule.forRoot({ key: 'dayModelState' }),
   ],
   providers: [],
